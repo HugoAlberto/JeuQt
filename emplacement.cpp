@@ -92,24 +92,7 @@ void emplacement::mousePressEvent(QMouseEvent *)
 }
 void emplacement::mouseMoveEvent(QMouseEvent *ev)
 {
-   if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->jvj==true))
-   {
-       if(mum->emplacementDeplace!=NULL)
-       {
-           QPoint lePointSurvole=mapToParent(ev->pos());
-           emplacement* emplacementSurvole=(emplacement *)mum->childAt(lePointSurvole);
-           if(emplacementSurvole!=NULL && emplacementSurvole->inherits("emplacement") && emplacementSurvole->estVide() && jouxte(emplacementSurvole) && mum->joueurActif->getNbJeton()<=0)
-           {
-
-               mum->setCurseur(*mum->joueurActif->getSonCurseur("ok"));
-           }
-           else
-           {
-               mum->setCurseur(*mum->joueurActif->getSonCurseur("normal"));
-           }
-       }
-   }
-   else if(mum->joueurActif==mum->joueurOrdi && mum->serveur==false)
+   if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->jvj==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false))
    {
        if(mum->emplacementDeplace!=NULL)
        {
@@ -130,25 +113,7 @@ void emplacement::mouseMoveEvent(QMouseEvent *ev)
 
 void emplacement::mouseReleaseEvent(QMouseEvent *ev)
 {
-    if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->jvj==true))
-    {
-        QPoint lePointSurvole=mapToParent(ev->pos());
-        emplacement* emplacementRelache=(emplacement *)mum->childAt(lePointSurvole);
-        if(emplacementRelache!=NULL && emplacementRelache->inherits("emplacement") && emplacementRelache->estVide()&& jouxte(emplacementRelache) && mum->joueurActif->getNbJeton()<=0)
-        {
-           if(mum->emplacementDeplace!=NULL)
-           {
-               emplacementRelache->setJoueur(mum->emplacementDeplace->leJoueur);
-               QString coord = QString::number(this->ligne)+":"+QString::number(this->col)+"|"+QString::number(emplacementRelache->ligne)+":"+QString::number(emplacementRelache->col);
-               mum->laSocket->write(coord.toLatin1());
-               mum->emplacementDeplace->vider();
-               mum->emplacementDeplace=NULL;
-               if(! mum->dejaGagne(mum->joueurActif)) mum->changement();
-           }
-        }
-        mum->resetCurseur();
-    }
-    else if(mum->joueurActif==mum->joueurOrdi && mum->serveur==false)
+    if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->jvj==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false))
     {
         QPoint lePointSurvole=mapToParent(ev->pos());
         emplacement* emplacementRelache=(emplacement *)mum->childAt(lePointSurvole);
