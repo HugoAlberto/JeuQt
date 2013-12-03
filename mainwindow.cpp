@@ -25,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent) :
     {
         for (int j=0;j<3;j++)
         {
-            tabEmplacement[i][j]=new emplacement(this,".",this);
+            tabEmplacement[i][j]=new emplacement(this,this);
             tabEmplacement[i][j]->ligne=i;
             tabEmplacement[i][j]->col=j;
             ui->gridLayoutJeu->addWidget(tabEmplacement[i][j],i,j,Qt::AlignHCenter);
@@ -280,3 +280,8 @@ void MainWindow::on_pushButtonSolo_clicked()
     ui->stackedWidget->setCurrentIndex(1);
 }
 
+void MainWindow::on_pushButtonSoloIa_clicked()
+{
+  iaOn=true;
+  ui->stackedWidget->setCurrentIndex(1);
+}

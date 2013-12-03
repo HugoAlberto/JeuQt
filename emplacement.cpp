@@ -5,7 +5,7 @@
 #include <QStatusBar>
 #include <QMouseEvent>
 
-emplacement::emplacement(MainWindow * maman,QString texte,QWidget *parent) :
+emplacement::emplacement(MainWindow * maman,QWidget *parent) :
    QLabel(parent)
 {
    mum=maman;
@@ -45,18 +45,7 @@ void emplacement::mousePressEvent(QMouseEvent *)
        {
            if(mum->joueurActif->getNbJeton()>0)
            {
-               if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->jvj==true))
-               {
-                   setJoueur(mum->joueurActif);
-                   mum->joueurActif->diminueNbJeton();
-                   QString coord = QString::number(this->ligne)+":"+QString::number(this->col);
-                   mum->laSocket->write(coord.toLatin1());
-                   if(!mum->dejaGagne(mum->joueurActif))
-                   {
-                       mum->changement();
-                   }
-               }
-               else if(mum->joueurActif==mum->joueurOrdi && mum->serveur==false)
+               if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false) || (mum->jvj==true) || (mum->iaOn==true))
                {
                    setJoueur(mum->joueurActif);
                    mum->joueurActif->diminueNbJeton();
@@ -71,28 +60,24 @@ void emplacement::mousePressEvent(QMouseEvent *)
        }
        else
        {
-           if((leJoueur==mum->joueurActif && mum->joueurActif->getNbJeton()<=0 && mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (leJoueur==mum->joueurActif && mum->joueurActif->getNbJeton()<=0 && mum->jvj==true))
+           if (leJoueur==mum->joueurActif && mum->joueurActif->getNbJeton()<=0)
            {
-               if(!mum->estCoince(this))
+               if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false) || (mum->jvj==true) || (mum->iaOn==true))
                {
-                   mum->setCurseur(*mum->joueurActif->getSonCurseur("normal"));
-                   mum->setEmplacementDeplace(this);
-               }
-           }
-           else if((leJoueur==mum->joueurActif && mum->joueurActif->getNbJeton()<=0 && mum->joueurActif==mum->joueurOrdi && mum->serveur==false))
-           {
-               if(!mum->estCoince(this))
-               {
-                   mum->setCurseur(*mum->joueurActif->getSonCurseur("normal"));
-                   mum->setEmplacementDeplace(this);
+                   if(!mum->estCoince(this))
+                   {
+                       mum->setCurseur(*mum->joueurActif->getSonCurseur("normal"));
+                       mum->setEmplacementDeplace(this);
+                   }
                }
            }
        }
    }
 }
+
 void emplacement::mouseMoveEvent(QMouseEvent *ev)
 {
-   if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->jvj==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false))
+   if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false) || (mum->jvj==true))
    {
        if(mum->emplacementDeplace!=NULL)
        {
@@ -113,7 +98,7 @@ void emplacement::mouseMoveEvent(QMouseEvent *ev)
 
 void emplacement::mouseReleaseEvent(QMouseEvent *ev)
 {
-    if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->jvj==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false))
+    if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false) || (mum->jvj==true))
     {
         QPoint lePointSurvole=mapToParent(ev->pos());
         emplacement* emplacementRelache=(emplacement *)mum->childAt(lePointSurvole);
@@ -132,6 +117,7 @@ void emplacement::mouseReleaseEvent(QMouseEvent *ev)
         mum->resetCurseur();
     }
 }
+
 bool emplacement::jouxte(emplacement *e)
 {
    bool resultat;

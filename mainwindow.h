@@ -42,6 +42,8 @@ public:
    QTcpSocket* laSocket;
    bool serveur;
    bool jvj;
+   bool iaOn;
+
 
 private:
    Ui::MainWindow *ui;
@@ -65,6 +67,7 @@ private slots:
    void on_pushButtonSolo_clicked();
    void on_pushButtonServeur_clicked();
    void on_pushButtonClient_clicked();
+   void on_pushButtonSoloIa_clicked();
 };
 
 #endif // MAINWINDOW_H
