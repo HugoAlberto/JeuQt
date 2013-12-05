@@ -22,7 +22,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->horizontalLayoutJoueurs->addWidget(joueurOrdi);
     ui->horizontalLayoutJoueurs->addStretch();
     for(int i=0;i<3;i++)
-    {
         for (int j=0;j<3;j++)
         {
             tabEmplacement[i][j]=new emplacement(this,this);
@@ -30,7 +29,6 @@ MainWindow::MainWindow(QWidget *parent) :
             tabEmplacement[i][j]->col=j;
             ui->gridLayoutJeu->addWidget(tabEmplacement[i][j],i,j,Qt::AlignHCenter);
         }
-    }
     timerTour=new QTimer(this);
     connect(timerTour,SIGNAL(timeout()),this,SLOT(raffraichirBarreProgression()));
     tirage();
@@ -111,19 +109,26 @@ bool MainWindow::dejaGagne(joueur *leJoueur)
 
 void MainWindow::changement()
 {
-   if (joueurActif==joueurOrdi)
-   {
-       joueurActif=joueurHumain;
-       ui->labelJoueur1->setText("<html><head/><body><p><span style='font-weight:600;'>Player 1's turn!</span></p></body></html>");
-       ui->labelJoueur2->setText("<html><head/><body><p>Player 2</p></body></html>");
-   }
-   else
-   {
-       joueurActif=joueurOrdi;
-       ui->labelJoueur2->setText("<html><head/><body><p><span style='font-weight:600;'>Player 2's turn!</span></p></body></html>");
-       ui->labelJoueur1->setText("<html><head/><body><p>Player 1</p></body></html>");
-   }
-   ui->progressBarTour->setValue(0);
+    if (joueurActif==joueurOrdi)
+    {
+        joueurActif=joueurHumain;
+        ui->labelJoueur1->setText("<html><head/><body><p><span style='font-weight:600;'>Player 1's turn!</span></p></body></html>");
+        ui->labelJoueur2->setText("<html><head/><body><p>Player 2</p></body></html>");
+    }
+    else
+    {
+        joueurActif=joueurOrdi;
+       /* if(iaOn)
+        {
+
+        }
+        else
+        {*/
+            ui->labelJoueur2->setText("<html><head/><body><p><span style='font-weight:600;'>Player 2's turn!</span></p></body></html>");
+            ui->labelJoueur1->setText("<html><head/><body><p>Player 1</p></body></html>");
+        //}
+    }
+    ui->progressBarTour->setValue(0);
 }
 
 bool MainWindow::estCoince(emplacement *)
@@ -139,16 +144,11 @@ bool MainWindow::accessible(emplacement* e1,emplacement* e2)
 
 void MainWindow::initialiseJeu()
 {
-
    joueurHumain->resetJeton();
    joueurOrdi->resetJeton();
    for(int noLigne=0;noLigne<3;noLigne++)
-   {
        for (int noCol=0;noCol<3;noCol++)
-       {
            tabEmplacement[noLigne][noCol]->vider();
-       }
-   }
    changement();
    emplacementDeplace=NULL;
    partieTerminee=false;
@@ -172,13 +172,9 @@ void MainWindow::raffraichirBarreProgression()
     {
          joueur * leGagnant;
          if(joueurActif==joueurHumain)
-         {
              leGagnant=joueurOrdi;
-         }
          else
-         {
             leGagnant=joueurHumain;
-         }
          QMessageBox msgBox;
          msgBox.setText("The Player "+leGagnant->getCouleur()+" won! Time limit!");
          msgBox.exec();
@@ -202,9 +198,7 @@ void MainWindow::commencePartie()
 void  MainWindow::changementEtatSocket(QAbstractSocket::SocketState etat)
 {
    if (etat==QAbstractSocket::ConnectedState)
-   {
        laSocket->write(" ");
-   }
 }
 
 void MainWindow::receptionDonnees()
@@ -217,7 +211,6 @@ void MainWindow::receptionDonnees()
         QChar charCol=donnees.at(2);
         int intCol=charCol.digitValue();
         if(joueurActif->getNbJeton()<=0)
-        {
             if(donnees.at(4).digitValue()>=0 && donnees.at(4).digitValue()<=2 && donnees.at(6).digitValue()>=0 && donnees.at(6).digitValue()<=2)
             {
                 QChar charLigneD=donnees.at(4);
@@ -227,11 +220,8 @@ void MainWindow::receptionDonnees()
                 tabEmplacement[intLigne][intCol]->vider();
                 tabEmplacement[intLigneD][intColD]->jeuAdverseMove();
             }
-        }
         else if(joueurActif->getNbJeton()>0)
-        {
             tabEmplacement[intLigne][intCol]->jeuAdverse();
-        }
     }
     else
         if((joueurActif->getLettre()=="a" && joueurActif->getLettre()!=donnees) || (joueurActif->getLettre()=="b" && joueurActif->getLettre()!=donnees))
@@ -268,9 +258,7 @@ void MainWindow::on_pushButtonClient_clicked()
         }
     }
     else
-    {
         qDebug()<<"Nope";
-    }
 }
 
 void MainWindow::on_pushButtonSolo_clicked()
@@ -282,6 +270,6 @@ void MainWindow::on_pushButtonSolo_clicked()
 
 void MainWindow::on_pushButtonSoloIa_clicked()
 {
-  iaOn=true;
-  ui->stackedWidget->setCurrentIndex(1);
+    iaOn=true;
+    ui->stackedWidget->setCurrentIndex(1);
 }

@@ -44,7 +44,6 @@ public:
    bool jvj;
    bool iaOn;
 
-
 private:
    Ui::MainWindow *ui;
    QCursor normal;
