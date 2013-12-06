@@ -379,7 +379,7 @@ font: 75 12pt &quot;Cantarell&quot;;</string>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_2">
+              <widget class="QPushButton" name="pushButton_Quitter">
                <property name="maximumSize">
                 <size>
                  <width>16777215</width>

@@ -228,7 +228,7 @@ void MainWindow::receptionDonnees()
             changement();
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_Quitter_clicked()
 {
     this->close();
 }

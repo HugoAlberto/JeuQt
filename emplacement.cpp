@@ -5,10 +5,9 @@
 #include <QStatusBar>
 #include <QMouseEvent>
 
-emplacement::emplacement(MainWindow * maman,QWidget *parent) :
+emplacement::emplacement(MainWindow * mum,QWidget *parent) :
    QLabel(parent)
 {
-   mum=maman;
    leJoueur=NULL;
    setPixmap(mum->pixmapEmptyEmplacement);
    setAutoFillBackground(false);

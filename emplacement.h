@@ -12,7 +12,7 @@ class emplacement : public QLabel
 private:
    MainWindow* mum;
 public:
-   explicit emplacement(MainWindow * maman,QWidget *parent = 0);
+   explicit emplacement(MainWindow * mum,QWidget *parent = 0);
    int ligne;
    int col;
    joueur* leJoueur;
