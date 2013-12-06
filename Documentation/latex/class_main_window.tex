@@ -1,0 +1,327 @@
+\hypertarget{class_main_window}{\section{Main\-Window Class Reference}
+\label{class_main_window}\index{Main\-Window@{Main\-Window}}
+}
+
+
+Classe \hyperlink{class_main_window}{Main\-Window} \-: public Q\-Main\-Window.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\-h$>$}
+
+Inheritance diagram for Main\-Window\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_main_window_a4ae4ac96dbfdcb80facbf7da0ae3fb5e}{bool \hyperlink{class_main_window_a4ae4ac96dbfdcb80facbf7da0ae3fb5e}{est\-Coince} (\hyperlink{classemplacement}{emplacement} $\ast$)}\label{class_main_window_a4ae4ac96dbfdcb80facbf7da0ae3fb5e}
+
+\begin{DoxyCompactList}\small\item\em Si le pion est coincé et ne peut être déplcacé \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_window_ac3a2c00ad936408dce78d15697eeef24}{accessible} (\hyperlink{classemplacement}{emplacement} $\ast$e1, \hyperlink{classemplacement}{emplacement} $\ast$e2)
+\begin{DoxyCompactList}\small\item\em Si l'emplacement est accéssible par le pion. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a8e9fb499b85eef1d31b4caedcdad3424}{set\-Curseur} (Q\-Cursor \&cuseur)
+\item 
+void \hyperlink{class_main_window_aa423b534c9d408e59a52f6e7644ccdcb}{commence\-Partie} ()
+\item 
+void \hyperlink{class_main_window_acb2efdb6b0b137cf2e44d6bd2fbb3aec}{reception\-Donnees} ()
+\begin{DoxyCompactList}\small\item\em Réception des données. \end{DoxyCompactList}\item 
+\hypertarget{class_main_window_a52d0b54e86461bd0f4738921651c15a2}{void \hyperlink{class_main_window_a52d0b54e86461bd0f4738921651c15a2}{changement\-Etat\-Socket} (Q\-Abstract\-Socket\-::\-Socket\-State etat)}\label{class_main_window_a52d0b54e86461bd0f4738921651c15a2}
+
+\begin{DoxyCompactList}\small\item\em Fonctionnalité à développer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{Main\-Window} (Q\-Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Le constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\-Main\-Window} ()
+\begin{DoxyCompactList}\small\item\em Le destructeur. \end{DoxyCompactList}\item 
+\hypertarget{class_main_window_a1eefa05031d74694e4249a8c68741122}{void {\bfseries set\-Emplacement\-Deplace} (\hyperlink{classemplacement}{emplacement} $\ast$e)}\label{class_main_window_a1eefa05031d74694e4249a8c68741122}
+
+\item 
+\hypertarget{class_main_window_a3ab75adb0221eb5e362f2070f71ebc22}{void \hyperlink{class_main_window_a3ab75adb0221eb5e362f2070f71ebc22}{reset\-Curseur} ()}\label{class_main_window_a3ab75adb0221eb5e362f2070f71ebc22}
+
+\begin{DoxyCompactList}\small\item\em Remise du curseur d'origine. \end{DoxyCompactList}\item 
+\hypertarget{class_main_window_a3c0bedf7eae76f0c5ca35bd16491b919}{void \hyperlink{class_main_window_a3c0bedf7eae76f0c5ca35bd16491b919}{changement} ()}\label{class_main_window_a3c0bedf7eae76f0c5ca35bd16491b919}
+
+\begin{DoxyCompactList}\small\item\em Changement du joueur en cours. \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_window_a6dc1f84d9bc6e8ab7f1bb6bc04e2db49}{ligne} (int no)
+\begin{DoxyCompactList}\small\item\em Ligne du plateau de jeu (numéro de la ligne) \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_window_a85653198b42750c0f09876f0af3715d7}{col} (int no)
+\begin{DoxyCompactList}\small\item\em Colonne du plateau de jeu (numéro de la colonne) \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_window_a7b80bba7c56fbcc016dbc004d208ec31}{diag} (int no)
+\begin{DoxyCompactList}\small\item\em Diagonale du plateau de jeu (numéro de la diagonale) \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_window_a1810f8a7d5a8497d738d909efca8947b}{deja\-Gagne} (\hyperlink{classjoueur}{joueur} $\ast$un\-Joueur)
+\begin{DoxyCompactList}\small\item\em Si le joueur à déjà gagné (le joueur) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjoueur}{joueur} $\ast$ \hyperlink{class_main_window_a70a2607d9b49f3b5cd32afec1cb614a9}{joueur\-Actif}
+\begin{DoxyCompactList}\small\item\em Le joueur qui est entrain de jouer. \end{DoxyCompactList}\item 
+\hyperlink{classjoueur}{joueur} $\ast$ \hyperlink{class_main_window_ac8503f9eb4259016c7858e59aa31c1a4}{joueur\-Humain}
+\item 
+\hyperlink{classjoueur}{joueur} $\ast$ \hyperlink{class_main_window_acb5c1aad1ac317404027da04e4a175d3}{joueur\-Ordi}
+\item 
+\hypertarget{class_main_window_aa201a7ead9510f42427bd7b28e690df1}{\hyperlink{classemplacement}{emplacement} $\ast$ \hyperlink{class_main_window_aa201a7ead9510f42427bd7b28e690df1}{emplacement\-Deplace}}\label{class_main_window_aa201a7ead9510f42427bd7b28e690df1}
+
+\begin{DoxyCompactList}\small\item\em Le pion déplacé \end{DoxyCompactList}\item 
+\hypertarget{class_main_window_a40ca81795033b7d295527bc860f716cf}{Q\-Pixmap \hyperlink{class_main_window_a40ca81795033b7d295527bc860f716cf}{pixmap\-Empty\-Emplacement}}\label{class_main_window_a40ca81795033b7d295527bc860f716cf}
+
+\begin{DoxyCompactList}\small\item\em L'image du pion vide. \end{DoxyCompactList}\item 
+\hypertarget{class_main_window_abe41e7eada364f38acf9bfe58cc6eee3}{Q\-Timer $\ast$ \hyperlink{class_main_window_abe41e7eada364f38acf9bfe58cc6eee3}{timer\-Tour}}\label{class_main_window_abe41e7eada364f38acf9bfe58cc6eee3}
+
+\begin{DoxyCompactList}\small\item\em Le temps pour chaque tour (sablier). \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_window_a00d26707b5d27cc6ce07479a46244692}{partie\-Terminee}
+\begin{DoxyCompactList}\small\item\em Si la partie est déjà terminée. \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_window_ac4fe06d6d85536567fd86733f8cdf6c9}{serveur}
+\begin{DoxyCompactList}\small\item\em Si l'application est un serveur. \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_window_a8037ff2bca42ebb5858b0cebd5ef9bb7}{jvj}
+\begin{DoxyCompactList}\small\item\em Si l'application est un joueur contre un joueur. \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_window_a68723ed09b653ede2bd97dd85928076b}{ia\-On}
+\begin{DoxyCompactList}\small\item\em Si l'application est contre un ordinateur. \end{DoxyCompactList}\item 
+\hypertarget{class_main_window_a4b1e890b4b33f6ff8c22621d2ce55c2d}{Q\-Tcp\-Server $\ast$ \hyperlink{class_main_window_a4b1e890b4b33f6ff8c22621d2ce55c2d}{server}}\label{class_main_window_a4b1e890b4b33f6ff8c22621d2ce55c2d}
+
+\begin{DoxyCompactList}\small\item\em Socket serveur. \end{DoxyCompactList}\item 
+\hypertarget{class_main_window_af1832d65e85d46eb6cd8492cbec60864}{Q\-Tcp\-Socket $\ast$ \hyperlink{class_main_window_af1832d65e85d46eb6cd8492cbec60864}{la\-Socket}}\label{class_main_window_af1832d65e85d46eb6cd8492cbec60864}
+
+\begin{DoxyCompactList}\small\item\em Socket client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe \hyperlink{class_main_window}{Main\-Window} \-: public Q\-Main\-Window. 
+
+\begin{DoxyAuthor}{Author}
+Alberto Hugo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-9 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2013-\/2014 
+\end{DoxyDate}
+\begin{DoxyPrecond}{Precondition}
+Initialise l'application 
+\end{DoxyPrecond}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License. 
+\end{DoxyCopyright}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{\index{Main\-Window@{Main\-Window}!Main\-Window@{Main\-Window}}
+\index{Main\-Window@{Main\-Window}!MainWindow@{Main\-Window}}
+\subsubsection[{Main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}Main\-Window\-::\-Main\-Window (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}
+
+
+Le constructeur. 
+
+\hyperlink{class_main_window}{Main\-Window} 
+\begin{DoxyParams}{Parameters}
+{\em parent,Met} & le codec U\-T\-F-\/8 en place, Construit l'interface, Met en place le socket, Crée le plateau de jeu, Connect le timer, Initialise la partie \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\index{Main\-Window@{Main\-Window}!$\sim$\-Main\-Window@{$\sim$\-Main\-Window}}
+\index{$\sim$\-Main\-Window@{$\sim$\-Main\-Window}!MainWindow@{Main\-Window}}
+\subsubsection[{$\sim$\-Main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}Main\-Window\-::$\sim$\-Main\-Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}
+
+
+Le destructeur. 
+
+Détruit la mémoire allouée par le programme 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_main_window_ac3a2c00ad936408dce78d15697eeef24}{\index{Main\-Window@{Main\-Window}!accessible@{accessible}}
+\index{accessible@{accessible}!MainWindow@{Main\-Window}}
+\subsubsection[{accessible}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Window\-::accessible (
+\begin{DoxyParamCaption}
+\item[{{\bf emplacement} $\ast$}]{e1, }
+\item[{{\bf emplacement} $\ast$}]{e2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_ac3a2c00ad936408dce78d15697eeef24}
+
+
+Si l'emplacement est accéssible par le pion. 
+
+\begin{DoxyReturn}{Returns}
+l'emplacement est vide, et il est jouxte au pion qui est entrain d'être joué 
+\end{DoxyReturn}
+\hypertarget{class_main_window_a85653198b42750c0f09876f0af3715d7}{\index{Main\-Window@{Main\-Window}!col@{col}}
+\index{col@{col}!MainWindow@{Main\-Window}}
+\subsubsection[{col}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Window\-::col (
+\begin{DoxyParamCaption}
+\item[{int}]{no}
+\end{DoxyParamCaption}
+)}}\label{class_main_window_a85653198b42750c0f09876f0af3715d7}
+
+
+Colonne du plateau de jeu (numéro de la colonne) 
+
+Retourne true ou false en fonction de la colonne \begin{DoxyReturn}{Returns}
+true si la colonne est pleine par un même joueur 
+
+false si la colonne est vide ou pleine par plus d'un joueur 
+\end{DoxyReturn}
+\hypertarget{class_main_window_aa423b534c9d408e59a52f6e7644ccdcb}{\index{Main\-Window@{Main\-Window}!commence\-Partie@{commence\-Partie}}
+\index{commence\-Partie@{commence\-Partie}!MainWindow@{Main\-Window}}
+\subsubsection[{commence\-Partie}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::commence\-Partie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_aa423b534c9d408e59a52f6e7644ccdcb}
+Commence une partie en réseau quand un client à trouvé un serveur \hypertarget{class_main_window_a1810f8a7d5a8497d738d909efca8947b}{\index{Main\-Window@{Main\-Window}!deja\-Gagne@{deja\-Gagne}}
+\index{deja\-Gagne@{deja\-Gagne}!MainWindow@{Main\-Window}}
+\subsubsection[{deja\-Gagne}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Window\-::deja\-Gagne (
+\begin{DoxyParamCaption}
+\item[{{\bf joueur} $\ast$}]{un\-Joueur}
+\end{DoxyParamCaption}
+)}}\label{class_main_window_a1810f8a7d5a8497d738d909efca8947b}
+
+
+Si le joueur à déjà gagné (le joueur) 
+
+\begin{DoxyReturn}{Returns}
+true si la partie à déjà été gagné par un joueur 
+
+false si la partie n'est pas encore gagné 
+\end{DoxyReturn}
+\hypertarget{class_main_window_a7b80bba7c56fbcc016dbc004d208ec31}{\index{Main\-Window@{Main\-Window}!diag@{diag}}
+\index{diag@{diag}!MainWindow@{Main\-Window}}
+\subsubsection[{diag}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Window\-::diag (
+\begin{DoxyParamCaption}
+\item[{int}]{no}
+\end{DoxyParamCaption}
+)}}\label{class_main_window_a7b80bba7c56fbcc016dbc004d208ec31}
+
+
+Diagonale du plateau de jeu (numéro de la diagonale) 
+
+Retourne true ou false en fonction de la diagonale \begin{DoxyReturn}{Returns}
+true si la diagonale est pleine par un même joueur 
+
+false si la diagonaleest vide ou pleine par plus d'un joueur 
+\end{DoxyReturn}
+\hypertarget{class_main_window_a6dc1f84d9bc6e8ab7f1bb6bc04e2db49}{\index{Main\-Window@{Main\-Window}!ligne@{ligne}}
+\index{ligne@{ligne}!MainWindow@{Main\-Window}}
+\subsubsection[{ligne}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Window\-::ligne (
+\begin{DoxyParamCaption}
+\item[{int}]{no}
+\end{DoxyParamCaption}
+)}}\label{class_main_window_a6dc1f84d9bc6e8ab7f1bb6bc04e2db49}
+
+
+Ligne du plateau de jeu (numéro de la ligne) 
+
+Retourne true ou false en fonction de la ligne \begin{DoxyReturn}{Returns}
+true si la ligne est pleine par un même joueur 
+
+false si la ligne est vide ou pleine par plus d'un joueur 
+\end{DoxyReturn}
+\hypertarget{class_main_window_acb2efdb6b0b137cf2e44d6bd2fbb3aec}{\index{Main\-Window@{Main\-Window}!reception\-Donnees@{reception\-Donnees}}
+\index{reception\-Donnees@{reception\-Donnees}!MainWindow@{Main\-Window}}
+\subsubsection[{reception\-Donnees}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::reception\-Donnees (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_acb2efdb6b0b137cf2e44d6bd2fbb3aec}
+
+
+Réception des données. 
+
+Échange des données entre le serveur et le client \hypertarget{class_main_window_a8e9fb499b85eef1d31b4caedcdad3424}{\index{Main\-Window@{Main\-Window}!set\-Curseur@{set\-Curseur}}
+\index{set\-Curseur@{set\-Curseur}!MainWindow@{Main\-Window}}
+\subsubsection[{set\-Curseur}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::set\-Curseur (
+\begin{DoxyParamCaption}
+\item[{Q\-Cursor \&}]{cuseur}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a8e9fb499b85eef1d31b4caedcdad3424}
+Modifie le curseur courant par le curseur qui va bien 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_main_window_a68723ed09b653ede2bd97dd85928076b}{\index{Main\-Window@{Main\-Window}!ia\-On@{ia\-On}}
+\index{ia\-On@{ia\-On}!MainWindow@{Main\-Window}}
+\subsubsection[{ia\-On}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Window\-::ia\-On}}\label{class_main_window_a68723ed09b653ede2bd97dd85928076b}
+
+
+Si l'application est contre un ordinateur. 
+
+\begin{DoxyReturn}{Returns}
+true si l'application est contre un ordinateur 
+
+false si l'application n'est pas contre un ordinateur 
+\end{DoxyReturn}
+\hypertarget{class_main_window_a70a2607d9b49f3b5cd32afec1cb614a9}{\index{Main\-Window@{Main\-Window}!joueur\-Actif@{joueur\-Actif}}
+\index{joueur\-Actif@{joueur\-Actif}!MainWindow@{Main\-Window}}
+\subsubsection[{joueur\-Actif}]{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur}$\ast$ Main\-Window\-::joueur\-Actif}}\label{class_main_window_a70a2607d9b49f3b5cd32afec1cb614a9}
+
+
+Le joueur qui est entrain de jouer. 
+
+Comporte, soit le joueur humain (joueur 1), soit le joueur ordi (joueur 2) \begin{DoxyReturn}{Returns}
+Le joueur courrant 
+\end{DoxyReturn}
+\hypertarget{class_main_window_ac8503f9eb4259016c7858e59aa31c1a4}{\index{Main\-Window@{Main\-Window}!joueur\-Humain@{joueur\-Humain}}
+\index{joueur\-Humain@{joueur\-Humain}!MainWindow@{Main\-Window}}
+\subsubsection[{joueur\-Humain}]{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur}$\ast$ Main\-Window\-::joueur\-Humain}}\label{class_main_window_ac8503f9eb4259016c7858e59aa31c1a4}
+Le joueur humain, et aussi le joueur 1 \begin{DoxyReturn}{Returns}
+Le joueur 1 
+\end{DoxyReturn}
+\hypertarget{class_main_window_acb5c1aad1ac317404027da04e4a175d3}{\index{Main\-Window@{Main\-Window}!joueur\-Ordi@{joueur\-Ordi}}
+\index{joueur\-Ordi@{joueur\-Ordi}!MainWindow@{Main\-Window}}
+\subsubsection[{joueur\-Ordi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur}$\ast$ Main\-Window\-::joueur\-Ordi}}\label{class_main_window_acb5c1aad1ac317404027da04e4a175d3}
+Le joueur Ordi, et aussi le joueur 2 \begin{DoxyReturn}{Returns}
+Le joueur 2 
+\end{DoxyReturn}
+\hypertarget{class_main_window_a8037ff2bca42ebb5858b0cebd5ef9bb7}{\index{Main\-Window@{Main\-Window}!jvj@{jvj}}
+\index{jvj@{jvj}!MainWindow@{Main\-Window}}
+\subsubsection[{jvj}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Window\-::jvj}}\label{class_main_window_a8037ff2bca42ebb5858b0cebd5ef9bb7}
+
+
+Si l'application est un joueur contre un joueur. 
+
+\begin{DoxyReturn}{Returns}
+true si l'application est un joueur contre un joueur 
+
+false si l'application n'est pas un joueur contre un joueur 
+\end{DoxyReturn}
+\hypertarget{class_main_window_a00d26707b5d27cc6ce07479a46244692}{\index{Main\-Window@{Main\-Window}!partie\-Terminee@{partie\-Terminee}}
+\index{partie\-Terminee@{partie\-Terminee}!MainWindow@{Main\-Window}}
+\subsubsection[{partie\-Terminee}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Window\-::partie\-Terminee}}\label{class_main_window_a00d26707b5d27cc6ce07479a46244692}
+
+
+Si la partie est déjà terminée. 
+
+\begin{DoxyReturn}{Returns}
+true si la partie est terminé 
+
+false si la partie n'est pas terminé 
+\end{DoxyReturn}
+\hypertarget{class_main_window_ac4fe06d6d85536567fd86733f8cdf6c9}{\index{Main\-Window@{Main\-Window}!serveur@{serveur}}
+\index{serveur@{serveur}!MainWindow@{Main\-Window}}
+\subsubsection[{serveur}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Window\-::serveur}}\label{class_main_window_ac4fe06d6d85536567fd86733f8cdf6c9}
+
+
+Si l'application est un serveur. 
+
+\begin{DoxyReturn}{Returns}
+true si l'application est un serveur 
+
+false si l'application n'est pas un serveur 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\-h\item 
+mainwindow.\-cpp\end{DoxyCompactItemize}
