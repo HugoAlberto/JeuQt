@@ -31,6 +31,17 @@ class MainWindow : public QMainWindow
    Q_OBJECT
 
 public:
+    //! Le constructeur
+    /*!
+    * \brief MainWindow
+    * \param parent,
+    * Met le codec UTF-8 en place,
+    * Construit l'interface,
+    * Met en place le socket,
+    * Crée le plateau de jeu,
+    * Connect le timer,
+    * Initialise la partie
+    */
     explicit MainWindow(QWidget *parent = 0);
     //! Le destructeur
     /*! Détruit la mémoire allouée par le programme */
@@ -154,11 +165,24 @@ private slots:
     //! Initialise le jeu
     /*! Met ou remet le jeu à zéro */
     void initialiseJeu();
+    //! Quand le bouton quitter est cliqué
+    /*! Quitte l'application */
     void on_pushButton_Quitter_clicked();
+    //! Quand le bouton joueur contre joueur est cliqué
+    /*! Lance la partie en joueur humain contre joueur humain */
     void on_pushButtonSolo_clicked();
+    //! Quand le bouton serveur est cliqué
+    /*! Met l'application en attente d'un client */
     void on_pushButtonServeur_clicked();
+    //! Quand le bouton client est cliqué
+    /*! Met l'application en recherche d'un serveur et lance une boite de dialogue pour savoir l'ip sur laquelle il doit se connecter */
     void on_pushButtonClient_clicked();
+    //! Quand le bouton Solo vs Ia est cliqué
+    /*! Lance le jeu en solo contre l'oridinateur */
     void on_pushButtonSoloIa_clicked();
+    //! Quand le bouton pour annuler la recherche est cliqué
+    /*! Retourne à la page principale */
+    void on_pushButtonAnnulerLaRecherche_clicked();
 };
 
 #endif // MAINWINDOW_H

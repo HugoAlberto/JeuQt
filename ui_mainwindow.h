@@ -65,6 +65,7 @@ public:
     QWidget *page_3;
     QVBoxLayout *verticalLayout_5;
     QLabel *label_2;
+    QPushButton *pushButtonAnnulerLaRecherche;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -304,6 +305,12 @@ public:
 
         verticalLayout_5->addWidget(label_2);
 
+        pushButtonAnnulerLaRecherche = new QPushButton(page_3);
+        pushButtonAnnulerLaRecherche->setObjectName(QString::fromUtf8("pushButtonAnnulerLaRecherche"));
+        pushButtonAnnulerLaRecherche->setStyleSheet(QString::fromUtf8("background-image: url(:/Images/mescouilles.png);"));
+
+        verticalLayout_5->addWidget(pushButtonAnnulerLaRecherche);
+
         stackedWidget->addWidget(page_3);
 
         verticalLayout_2->addWidget(stackedWidget);
@@ -312,7 +319,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -332,6 +339,7 @@ public:
         pushButtonNouvellePartie->setText(QApplication::translate("MainWindow", "New game", 0, QApplication::UnicodeUTF8));
         pushButton_Quitter->setText(QApplication::translate("MainWindow", "Quit", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">En attente d'un client</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        pushButtonAnnulerLaRecherche->setText(QApplication::translate("MainWindow", "Annuler la recherche", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

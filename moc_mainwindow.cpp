@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../mainwindow.h"
+#include "mainwindow.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'mainwindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63
@@ -22,7 +22,7 @@ static const uint qt_meta_data_MainWindow[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -44,6 +44,7 @@ static const uint qt_meta_data_MainWindow[] = {
      349,   11,   11,   11, 0x08,
      380,   11,   11,   11, 0x08,
      410,   11,   11,   11, 0x08,
+     440,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -61,6 +62,7 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "on_pushButtonServeur_clicked()\0"
     "on_pushButtonClient_clicked()\0"
     "on_pushButtonSoloIa_clicked()\0"
+    "on_pushButtonAnnulerLaRecherche_clicked()\0"
 };
 
 void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -85,6 +87,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 11: _t->on_pushButtonServeur_clicked(); break;
         case 12: _t->on_pushButtonClient_clicked(); break;
         case 13: _t->on_pushButtonSoloIa_clicked(); break;
+        case 14: _t->on_pushButtonAnnulerLaRecherche_clicked(); break;
         default: ;
         }
     }
@@ -122,9 +125,9 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 15;
     }
     return _id;
 }

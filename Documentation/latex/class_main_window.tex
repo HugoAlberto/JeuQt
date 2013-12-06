@@ -21,24 +21,23 @@ Inheritance diagram for Main\-Window\-:\begin{figure}[H]
 \item 
 \hypertarget{class_main_window_a4ae4ac96dbfdcb80facbf7da0ae3fb5e}{bool \hyperlink{class_main_window_a4ae4ac96dbfdcb80facbf7da0ae3fb5e}{est\-Coince} (\hyperlink{classemplacement}{emplacement} $\ast$)}\label{class_main_window_a4ae4ac96dbfdcb80facbf7da0ae3fb5e}
 
-\begin{DoxyCompactList}\small\item\em est\-Coincé \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Si le pion est coincé et ne peut être déplcacé \end{DoxyCompactList}\item 
 bool \hyperlink{class_main_window_ac3a2c00ad936408dce78d15697eeef24}{accessible} (\hyperlink{classemplacement}{emplacement} $\ast$e1, \hyperlink{classemplacement}{emplacement} $\ast$e2)
-\begin{DoxyCompactList}\small\item\em accessible \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Si l'emplacement est accéssible par le pion. \end{DoxyCompactList}\item 
 void \hyperlink{class_main_window_a8e9fb499b85eef1d31b4caedcdad3424}{set\-Curseur} (Q\-Cursor \&cuseur)
-\begin{DoxyCompactList}\small\item\em set\-Curseur \end{DoxyCompactList}\item 
+\item 
 void \hyperlink{class_main_window_aa423b534c9d408e59a52f6e7644ccdcb}{commence\-Partie} ()
-\begin{DoxyCompactList}\small\item\em Commence la partie en réseau. \end{DoxyCompactList}\item 
+\item 
 void \hyperlink{class_main_window_acb2efdb6b0b137cf2e44d6bd2fbb3aec}{reception\-Donnees} ()
 \begin{DoxyCompactList}\small\item\em Réception des données. \end{DoxyCompactList}\item 
-\hypertarget{class_main_window_a52d0b54e86461bd0f4738921651c15a2}{void {\bfseries changement\-Etat\-Socket} (Q\-Abstract\-Socket\-::\-Socket\-State etat)}\label{class_main_window_a52d0b54e86461bd0f4738921651c15a2}
+\hypertarget{class_main_window_a52d0b54e86461bd0f4738921651c15a2}{void \hyperlink{class_main_window_a52d0b54e86461bd0f4738921651c15a2}{changement\-Etat\-Socket} (Q\-Abstract\-Socket\-::\-Socket\-State etat)}\label{class_main_window_a52d0b54e86461bd0f4738921651c15a2}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Fonctionnalité à développer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{{\bfseries Main\-Window} (Q\-Widget $\ast$parent=0)}\label{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}
-
-\item 
+\hyperlink{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{Main\-Window} (Q\-Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Le constructeur. \end{DoxyCompactList}\item 
 \hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\-Main\-Window} ()
 \begin{DoxyCompactList}\small\item\em Le destructeur. \end{DoxyCompactList}\item 
 \hypertarget{class_main_window_a1eefa05031d74694e4249a8c68741122}{void {\bfseries set\-Emplacement\-Deplace} (\hyperlink{classemplacement}{emplacement} $\ast$e)}\label{class_main_window_a1eefa05031d74694e4249a8c68741122}
@@ -64,9 +63,9 @@ bool \hyperlink{class_main_window_a1810f8a7d5a8497d738d909efca8947b}{deja\-Gagne
 \hyperlink{classjoueur}{joueur} $\ast$ \hyperlink{class_main_window_a70a2607d9b49f3b5cd32afec1cb614a9}{joueur\-Actif}
 \begin{DoxyCompactList}\small\item\em Le joueur qui est entrain de jouer. \end{DoxyCompactList}\item 
 \hyperlink{classjoueur}{joueur} $\ast$ \hyperlink{class_main_window_ac8503f9eb4259016c7858e59aa31c1a4}{joueur\-Humain}
-\begin{DoxyCompactList}\small\item\em Le joueur Humain. \end{DoxyCompactList}\item 
+\item 
 \hyperlink{classjoueur}{joueur} $\ast$ \hyperlink{class_main_window_acb5c1aad1ac317404027da04e4a175d3}{joueur\-Ordi}
-\begin{DoxyCompactList}\small\item\em Le joueur Ordi. \end{DoxyCompactList}\item 
+\item 
 \hypertarget{class_main_window_aa201a7ead9510f42427bd7b28e690df1}{\hyperlink{classemplacement}{emplacement} $\ast$ \hyperlink{class_main_window_aa201a7ead9510f42427bd7b28e690df1}{emplacement\-Deplace}}\label{class_main_window_aa201a7ead9510f42427bd7b28e690df1}
 
 \begin{DoxyCompactList}\small\item\em Le pion déplacé \end{DoxyCompactList}\item 
@@ -113,6 +112,22 @@ G\-N\-U Public License.
 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{\index{Main\-Window@{Main\-Window}!Main\-Window@{Main\-Window}}
+\index{Main\-Window@{Main\-Window}!MainWindow@{Main\-Window}}
+\subsubsection[{Main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}Main\-Window\-::\-Main\-Window (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}
+
+
+Le constructeur. 
+
+\hyperlink{class_main_window}{Main\-Window} 
+\begin{DoxyParams}{Parameters}
+{\em parent,Met} & le codec U\-T\-F-\/8 en place, Construit l'interface, Met en place le socket, Crée le plateau de jeu, Connect le timer, Initialise la partie \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\index{Main\-Window@{Main\-Window}!$\sim$\-Main\-Window@{$\sim$\-Main\-Window}}
 \index{$\sim$\-Main\-Window@{$\sim$\-Main\-Window}!MainWindow@{Main\-Window}}
 \subsubsection[{$\sim$\-Main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}Main\-Window\-::$\sim$\-Main\-Window (
@@ -137,7 +152,7 @@ Détruit la mémoire allouée par le programme
 )\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_ac3a2c00ad936408dce78d15697eeef24}
 
 
-accessible 
+Si l'emplacement est accéssible par le pion. 
 
 \begin{DoxyReturn}{Returns}
 l'emplacement est vide, et il est jouxte au pion qui est entrain d'être joué 
@@ -165,10 +180,6 @@ false si la colonne est vide ou pleine par plus d'un joueur
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_aa423b534c9d408e59a52f6e7644ccdcb}
-
-
-Commence la partie en réseau. 
-
 Commence une partie en réseau quand un client à trouvé un serveur \hypertarget{class_main_window_a1810f8a7d5a8497d738d909efca8947b}{\index{Main\-Window@{Main\-Window}!deja\-Gagne@{deja\-Gagne}}
 \index{deja\-Gagne@{deja\-Gagne}!MainWindow@{Main\-Window}}
 \subsubsection[{deja\-Gagne}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Window\-::deja\-Gagne (
@@ -235,10 +246,6 @@ Réception des données.
 \item[{Q\-Cursor \&}]{cuseur}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a8e9fb499b85eef1d31b4caedcdad3424}
-
-
-set\-Curseur 
-
 Modifie le curseur courant par le curseur qui va bien 
 
 \subsection{Member Data Documentation}
@@ -267,20 +274,12 @@ Le joueur courrant
 \hypertarget{class_main_window_ac8503f9eb4259016c7858e59aa31c1a4}{\index{Main\-Window@{Main\-Window}!joueur\-Humain@{joueur\-Humain}}
 \index{joueur\-Humain@{joueur\-Humain}!MainWindow@{Main\-Window}}
 \subsubsection[{joueur\-Humain}]{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur}$\ast$ Main\-Window\-::joueur\-Humain}}\label{class_main_window_ac8503f9eb4259016c7858e59aa31c1a4}
-
-
-Le joueur Humain. 
-
 Le joueur humain, et aussi le joueur 1 \begin{DoxyReturn}{Returns}
 Le joueur 1 
 \end{DoxyReturn}
 \hypertarget{class_main_window_acb5c1aad1ac317404027da04e4a175d3}{\index{Main\-Window@{Main\-Window}!joueur\-Ordi@{joueur\-Ordi}}
 \index{joueur\-Ordi@{joueur\-Ordi}!MainWindow@{Main\-Window}}
 \subsubsection[{joueur\-Ordi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur}$\ast$ Main\-Window\-::joueur\-Ordi}}\label{class_main_window_acb5c1aad1ac317404027da04e4a175d3}
-
-
-Le joueur Ordi. 
-
 Le joueur Ordi, et aussi le joueur 2 \begin{DoxyReturn}{Returns}
 Le joueur 2 
 \end{DoxyReturn}

@@ -65,7 +65,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="styleSheet">
@@ -412,6 +412,16 @@ background-position: 50% 50%;</string>
          <widget class="QLabel" name="label_2">
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;En attente d'un client&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonAnnulerLaRecherche">
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/Images/mescouilles.png);</string>
+          </property>
+          <property name="text">
+           <string>Annuler la recherche</string>
           </property>
          </widget>
         </item>

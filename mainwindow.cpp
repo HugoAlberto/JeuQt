@@ -273,3 +273,8 @@ void MainWindow::on_pushButtonSoloIa_clicked()
     iaOn=true;
     ui->stackedWidget->setCurrentIndex(1);
 }
+
+void MainWindow::on_pushButtonAnnulerLaRecherche_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}

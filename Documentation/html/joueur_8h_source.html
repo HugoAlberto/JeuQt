@@ -92,40 +92,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QLabel&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classjoueur.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classjoueur.html">joueur</a> : <span class="keyword">public</span> QLabel</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;   Q_OBJECT</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;   <span class="keyword">explicit</span> <a class="code" href="classjoueur.html">joueur</a>(QString l,QString stringCouleur, QWidget *parent = 0);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;   <span class="keywordtype">void</span> setLettre(QString);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   QString getLettre();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;   QCursor* getSonCurseur(QString lequel){<span class="keywordflow">if</span>(lequel==<span class="stringliteral">&quot;normal&quot;</span>) <span class="keywordflow">return</span> sonCurseurNormal;<span class="keywordflow">else</span> <span class="keywordflow">return</span> sonCurseurOk;};</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   <span class="keywordtype">int</span> getNbJeton(){<span class="keywordflow">return</span> nbJeton;};</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;   <span class="keywordtype">void</span> resetJeton(){nbJeton=3;};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;   <span class="keywordtype">void</span> diminueNbJeton(){nbJeton--;};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;   QString getCouleur(){<span class="keywordflow">return</span> couleur;};</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;signals:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;   QString normalStyleSheet;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   <span class="keywordtype">int</span> nbJeton;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;   QString lettre;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;   QCursor* sonCurseurNormal;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   QCursor* sonCurseurOk;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   QString couleur;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif // JOUEUR_H</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="ttc" id="classjoueur_html"><div class="ttname"><a href="classjoueur.html">joueur</a></div><div class="ttdef"><b>Definition:</b> joueur.h:6</div></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classjoueur.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classjoueur.html">joueur</a> : <span class="keyword">public</span> QLabel</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;   Q_OBJECT</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classjoueur.html">joueur</a>(QString l,QString stringCouleur, QWidget *parent = 0);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classjoueur.html#a6095d00e5c84a98694ae3f2ebbef48d8">setLettre</a>(QString);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    QString <a class="code" href="classjoueur.html#a7a91ed8fa89ad62545bae8e805565c39">getLettre</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classjoueur.html#a19403939c10d9a70b6035024978ca230">   25</a></span>&#160;    QCursor* <a class="code" href="classjoueur.html#a19403939c10d9a70b6035024978ca230">getSonCurseur</a>(QString lequel){<span class="keywordflow">if</span>(lequel==<span class="stringliteral">&quot;normal&quot;</span>) <span class="keywordflow">return</span> sonCurseurNormal;<span class="keywordflow">else</span> <span class="keywordflow">return</span> sonCurseurOk;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classjoueur.html#a80aefa29f51995d731605b5230840ac3">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classjoueur.html#a80aefa29f51995d731605b5230840ac3">getNbJeton</a>(){<span class="keywordflow">return</span> nbJeton;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classjoueur.html#a15c0ea5487cf6800e373cb1b1ed52b12">   31</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classjoueur.html#a15c0ea5487cf6800e373cb1b1ed52b12">resetJeton</a>(){nbJeton=3;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classjoueur.html#a1a1b8731c7eec4f854a65d83c3f6fc70">   33</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classjoueur.html#a1a1b8731c7eec4f854a65d83c3f6fc70">diminueNbJeton</a>(){nbJeton--;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classjoueur.html#a2992fc3e5e7f08794c001db796f5e925">   36</a></span>&#160;    QString <a class="code" href="classjoueur.html#a2992fc3e5e7f08794c001db796f5e925">getCouleur</a>(){<span class="keywordflow">return</span> couleur;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> nbJeton;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    QString lettre;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    QCursor* sonCurseurNormal;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    QCursor* sonCurseurOk;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QString couleur;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif // JOUEUR_H</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="ttc" id="classjoueur_html_a19403939c10d9a70b6035024978ca230"><div class="ttname"><a href="classjoueur.html#a19403939c10d9a70b6035024978ca230">joueur::getSonCurseur</a></div><div class="ttdeci">QCursor * getSonCurseur(QString lequel)</div><div class="ttdoc">Récupère le curseur du joueur actif. </div><div class="ttdef"><b>Definition:</b> joueur.h:25</div></div>
+<div class="ttc" id="classjoueur_html_a2992fc3e5e7f08794c001db796f5e925"><div class="ttname"><a href="classjoueur.html#a2992fc3e5e7f08794c001db796f5e925">joueur::getCouleur</a></div><div class="ttdeci">QString getCouleur()</div><div class="ttdoc">Récupère la couleur d&amp;#39;un joueur. </div><div class="ttdef"><b>Definition:</b> joueur.h:36</div></div>
+<div class="ttc" id="classjoueur_html_a15c0ea5487cf6800e373cb1b1ed52b12"><div class="ttname"><a href="classjoueur.html#a15c0ea5487cf6800e373cb1b1ed52b12">joueur::resetJeton</a></div><div class="ttdeci">void resetJeton()</div><div class="ttdoc">Initialise les jetons du joueur. </div><div class="ttdef"><b>Definition:</b> joueur.h:31</div></div>
+<div class="ttc" id="classjoueur_html_a1a1b8731c7eec4f854a65d83c3f6fc70"><div class="ttname"><a href="classjoueur.html#a1a1b8731c7eec4f854a65d83c3f6fc70">joueur::diminueNbJeton</a></div><div class="ttdeci">void diminueNbJeton()</div><div class="ttdoc">Diminue le nombre de jeton par 1. </div><div class="ttdef"><b>Definition:</b> joueur.h:33</div></div>
+<div class="ttc" id="classjoueur_html_a80aefa29f51995d731605b5230840ac3"><div class="ttname"><a href="classjoueur.html#a80aefa29f51995d731605b5230840ac3">joueur::getNbJeton</a></div><div class="ttdeci">int getNbJeton()</div><div class="ttdoc">Récupère le nombre de jetons. </div><div class="ttdef"><b>Definition:</b> joueur.h:28</div></div>
+<div class="ttc" id="classjoueur_html_a6095d00e5c84a98694ae3f2ebbef48d8"><div class="ttname"><a href="classjoueur.html#a6095d00e5c84a98694ae3f2ebbef48d8">joueur::setLettre</a></div><div class="ttdeci">void setLettre(QString)</div><div class="ttdoc">Met une lettre dans un QString. </div><div class="ttdef"><b>Definition:</b> joueur.cpp:21</div></div>
+<div class="ttc" id="classjoueur_html"><div class="ttname"><a href="classjoueur.html">joueur</a></div><div class="ttdoc">Classe joueur : public QLabel. </div><div class="ttdef"><b>Definition:</b> joueur.h:14</div></div>
+<div class="ttc" id="classjoueur_html_a7a91ed8fa89ad62545bae8e805565c39"><div class="ttname"><a href="classjoueur.html#a7a91ed8fa89ad62545bae8e805565c39">joueur::getLettre</a></div><div class="ttdeci">QString getLettre()</div><div class="ttdoc">Récupère la lettre du joueur. </div><div class="ttdef"><b>Definition:</b> joueur.cpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 6 2013 15:14:12 for Jeu Qt by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 6 2013 16:24:22 for Jeu Qt by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
