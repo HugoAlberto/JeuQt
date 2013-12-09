@@ -37,7 +37,9 @@ void emplacement::mousePressEvent(QMouseEvent *)
 {
    if(!mum->partieTerminee)
        if(estVide())
+       {
            if(mum->joueurActif->getNbJeton()>0)
+           {
                if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false) || (mum->jvj==true))
                {
                    setJoueur(mum->joueurActif);
@@ -49,14 +51,20 @@ void emplacement::mousePressEvent(QMouseEvent *)
                        mum->changement();
                    }
                }
-       else
-           if (leJoueur==mum->joueurActif && mum->joueurActif->getNbJeton()<=0)
-               if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false) || (mum->jvj==true) || (mum->iaOn==true))
-                   if(!mum->estCoince(this))
-                   {
-                       mum->setCurseur(*mum->joueurActif->getSonCurseur("normal"));
-                       mum->setEmplacementDeplace(this);
-                   }
+           }
+        }
+        else
+       {
+            if (leJoueur==mum->joueurActif && mum->joueurActif->getNbJeton()<=0)
+            {
+                if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false) || (mum->jvj==true))
+                    if(!mum->estCoince(this))
+                    {
+                        mum->setCurseur(*mum->joueurActif->getSonCurseur("normal"));
+                        mum->setEmplacementDeplace(this);
+                    }
+            }
+       }
 }
 
 void emplacement::mouseMoveEvent(QMouseEvent *ev)
