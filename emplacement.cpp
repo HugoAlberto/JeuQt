@@ -38,7 +38,7 @@ void emplacement::mousePressEvent(QMouseEvent *)
    if(!mum->partieTerminee)
        if(estVide())
            if(mum->joueurActif->getNbJeton()>0)
-               if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false) || (mum->jvj==true) || (mum->iaOn==true))
+               if((mum->joueurActif==mum->joueurHumain && mum->serveur==true) || (mum->joueurActif==mum->joueurOrdi && mum->serveur==false) || (mum->jvj==true))
                {
                    setJoueur(mum->joueurActif);
                    mum->joueurActif->diminueNbJeton();
