@@ -100,12 +100,12 @@
     <message>
         <location filename="mainwindow.cpp" line="101"/>
         <source> won!</source>
-        <translation>à gagné!</translation>
+        <translation>a gagné!</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="179"/>
         <source> won! Time limit!</source>
-        <translation>à gagné! Temps limite!</translation>
+        <translation>a gagné! Temps limite!</translation>
     </message>
 </context>
 </TS>

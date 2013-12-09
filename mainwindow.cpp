@@ -98,7 +98,7 @@ bool MainWindow::dejaGagne(joueur *leJoueur)
    if(gagne)
    {
        QMessageBox msgBox;
-       msgBox.setText(tr("The Player ")+leJoueur->getCouleur()+tr(" won!"));
+       msgBox.setText(tr("The Player ")+" "+leJoueur->getCouleur()+" "+tr(" won!"));
        msgBox.exec();
        partieTerminee=true;
        timerTour->stop();
@@ -176,7 +176,7 @@ void MainWindow::raffraichirBarreProgression()
          else
             leGagnant=joueurHumain;
          QMessageBox msgBox;
-         msgBox.setText(tr("The Player ")+leGagnant->getCouleur()+tr(" won! Time limit!"));
+         msgBox.setText(tr("The Player ")+" "+leGagnant->getCouleur()+" "+tr(" won! Time limit!"));
          msgBox.exec();
          partieTerminee=true;
          timerTour->stop();
