@@ -2,9 +2,7 @@
 #define EMPLACEMENT_H
 
 #include <QLabel>
-//! \include mainwindow.h
 #include "mainwindow.h"
-//! \include joueur.h
 #include "joueur.h"
 class MainWindow;
 
@@ -22,7 +20,7 @@ class emplacement : public QLabel
 private:
    MainWindow* mum;
 public:
-   explicit emplacement(MainWindow * mum,QWidget *parent = 0);
+   explicit emplacement(MainWindow * maman,QWidget *parent = 0);
    //! Ligne du plateau
    int ligne;
    //! Colonne du plateau

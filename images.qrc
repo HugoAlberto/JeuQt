@@ -4,8 +4,8 @@
         <file>red.png</file>
         <file>grey.png</file>
         <file>blue.png</file>
-        <file>metal-texture.jpg</file>
         <file>fond-texture.jpg</file>
         <file>fond-plateau.png</file>
+        <file>metal-texture.jpg</file>
     </qresource>
 </RCC>

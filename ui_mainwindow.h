@@ -319,7 +319,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -338,8 +338,8 @@ public:
         progressBarTour->setFormat(QApplication::translate("MainWindow", "%v", 0, QApplication::UnicodeUTF8));
         pushButtonNouvellePartie->setText(QApplication::translate("MainWindow", "New game", 0, QApplication::UnicodeUTF8));
         pushButton_Quitter->setText(QApplication::translate("MainWindow", "Quit", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">En attente d'un client</span></p></body></html>", 0, QApplication::UnicodeUTF8));
-        pushButtonAnnulerLaRecherche->setText(QApplication::translate("MainWindow", "Annuler la recherche", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Waiting for a client...</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        pushButtonAnnulerLaRecherche->setText(QApplication::translate("MainWindow", "Stop searching", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

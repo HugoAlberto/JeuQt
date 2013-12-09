@@ -22,3 +22,5 @@ FORMS    += mainwindow.ui
 
 RESOURCES += \
     images.qrc
+
+TRANSLATIONS = jeuQt_fr.ts \

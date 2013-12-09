@@ -2,9 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-//! \include joueur.h
 #include "joueur.h"
-//! \include emplacement.h
 #include "emplacement.h"
 #include <QStatusBar>
 #include <QTimer>
@@ -34,13 +32,7 @@ public:
     //! Le constructeur
     /*!
     * \brief MainWindow
-    * \param parent,
-    * Met le codec UTF-8 en place,
-    * Construit l'interface,
-    * Met en place le socket,
-    * Crée le plateau de jeu,
-    * Connect le timer,
-    * Initialise la partie
+    * \param parent
     */
     explicit MainWindow(QWidget *parent = 0);
     //! Le destructeur

@@ -15,6 +15,18 @@ class joueur : public QLabel
 {
    Q_OBJECT
 
+private:
+    //! Nombre de jeton (int)
+    int nbJeton;
+    //! Lettre
+    QString lettre;
+    //! Curseur normal avant déplacement
+    QCursor* sonCurseurNormal;
+    //! Si l'emplacement survolé est ok
+    QCursor* sonCurseurOk;
+    //! Couleur du curseur
+    QString couleur;
+
 public:
     explicit joueur(QString l,QString stringCouleur, QWidget *parent = 0);
     //! Met une lettre dans un QString
@@ -34,18 +46,6 @@ public:
     //! Récupère la couleur d'un joueur
     /*! \return couleur */
     QString getCouleur(){return couleur;};
-
-private:
-    //! Nombre de jeton (int)
-    int nbJeton;
-    //! Lettre
-    QString lettre;
-    //! Curseur normal avant déplacement
-    QCursor* sonCurseurNormal;
-    //! Si l'emplacement survolé est ok
-    QCursor* sonCurseurOk;
-    //! Couleur du curseur
-    QString couleur;
 };
 
 #endif // JOUEUR_H

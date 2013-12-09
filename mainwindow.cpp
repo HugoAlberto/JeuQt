@@ -6,8 +6,8 @@
 MainWindow::MainWindow(QWidget *parent) :
    QMainWindow(parent),
    ui(new Ui::MainWindow)
-{
-    QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf8"));
+{    
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
     ui->setupUi(this);
     laSocket=new QTcpSocket(this);
     pixmapEmptyEmplacement=QPixmap(":Images/grey");
@@ -60,14 +60,14 @@ void MainWindow::tirage()
    if(qrand()%2==0)
    {
         joueurActif=joueurHumain;
-        ui->labelJoueur1->setText("<html><head/><body><p><span style='font-weight:600;'>Player 1's turn!</span></p></body></html>");
-        ui->labelJoueur2->setText("<html><head/><body><p>Player 2</p></body></html>");
+        ui->labelJoueur1->setText(tr("<html><head/><body><p><span style='font-weight:600;'>Player 1's turn!</span></p></body></html>"));
+        ui->labelJoueur2->setText(tr("<html><head/><body><p>Player 2</p></body></html>"));
     }
     else
     {
         joueurActif=joueurOrdi;
-        ui->labelJoueur2->setText("<html><head/><body><p><span style='font-weight:600;'>Player 2's turn!</span></p></body></html>");
-        ui->labelJoueur1->setText("<html><head/><body><p>Player 1</p></body></html>");
+        ui->labelJoueur2->setText(tr("<html><head/><body><p><span style='font-weight:600;'>Player 2's turn!</span></p></body></html>"));
+        ui->labelJoueur1->setText(tr("<html><head/><body><p>Player 1</p></body></html>"));
    }
 }
 
@@ -98,7 +98,7 @@ bool MainWindow::dejaGagne(joueur *leJoueur)
    if(gagne)
    {
        QMessageBox msgBox;
-       msgBox.setText("The Player "+leJoueur->getCouleur()+" won!");
+       msgBox.setText(tr("The Player ")+leJoueur->getCouleur()+tr(" won!"));
        msgBox.exec();
        partieTerminee=true;
        timerTour->stop();
@@ -112,8 +112,8 @@ void MainWindow::changement()
     if (joueurActif==joueurOrdi)
     {
         joueurActif=joueurHumain;
-        ui->labelJoueur1->setText("<html><head/><body><p><span style='font-weight:600;'>Player 1's turn!</span></p></body></html>");
-        ui->labelJoueur2->setText("<html><head/><body><p>Player 2</p></body></html>");
+        ui->labelJoueur1->setText(tr("<html><head/><body><p><span style='font-weight:600;'>Player 1's turn!</span></p></body></html>"));
+        ui->labelJoueur2->setText(tr("<html><head/><body><p>Player 2</p></body></html>"));
     }
     else
     {
@@ -124,8 +124,8 @@ void MainWindow::changement()
         }
         else
         {*/
-            ui->labelJoueur2->setText("<html><head/><body><p><span style='font-weight:600;'>Player 2's turn!</span></p></body></html>");
-            ui->labelJoueur1->setText("<html><head/><body><p>Player 1</p></body></html>");
+            ui->labelJoueur2->setText(tr("<html><head/><body><p><span style='font-weight:600;'>Player 2's turn!</span></p></body></html>"));
+            ui->labelJoueur1->setText(tr("<html><head/><body><p>Player 1</p></body></html>"));
         //}
     }
     ui->progressBarTour->setValue(0);
@@ -176,7 +176,7 @@ void MainWindow::raffraichirBarreProgression()
          else
             leGagnant=joueurHumain;
          QMessageBox msgBox;
-         msgBox.setText("The Player "+leGagnant->getCouleur()+" won! Time limit!");
+         msgBox.setText(tr("The Player ")+leGagnant->getCouleur()+tr(" won! Time limit!"));
          msgBox.exec();
          partieTerminee=true;
          timerTour->stop();
